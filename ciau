@@ -1,0 +1,215 @@
+#!/bin/bash
+
+EDITOR=vim
+PASSWD=/etc/passwd
+RED='\033[0;41;30m'
+STD='\033[0;0;39m'
+
+
+pause(){
+  read -p "Press [Enter] key to continue..." fackEnterKey
+}
+
+holaMundo(){
+        /bin/bash ./1holamundo.sh
+        pause
+}
+
+two(){
+        /bin/bash ./18holamundo.sh
+        pause
+}
+
+three(){
+        /bin/bash ./2variables.sh
+        pause
+}
+
+four(){
+        /bin/bash ./3arrays.sh
+        pause
+}
+
+five(){
+        /bin/bash ./4otrosusos.sh
+        pause
+}
+
+six(){
+        /bin/bash ./5aritmeticas.sh
+        pause
+}
+
+seven(){
+        /bin/bash ./6logica.sh
+        pause
+}
+
+eight(){
+        /bin/bash ./7condicionales.sh
+        pause
+}
+
+nine(){
+        /bin/bash ./8case.sh
+        pause
+}
+
+ten(){
+        /bin/bash ./9comprobacion.sh
+        pause
+}
+
+eleven(){
+        /bin/bash ./10for.sh
+        pause
+}
+
+twelve(){
+        /bin/bash ./11while.sh
+        pause
+}
+
+thirteen(){
+        /bin/bash ./12until.sh
+        pause
+}
+
+fourteen(){
+        /bin/bash ./13select.sh
+        pause
+}
+
+fifteen(){
+        /bin/bash ./14funciones.sh
+        pause
+}
+
+sixteen(){
+        /bin/bash ./15librerias.sh
+        pause
+}
+
+seventeen(){
+        /bin/bash ./16señales.sh
+        pause
+}
+
+eighteen(){
+        /bin/bash ./17colores.sh
+        pause
+}
+
+nine(){
+        /bin/bash ./8case.sh
+        pause
+}
+
+ten(){
+        /bin/bash ./9comprobacion.sh
+        pause
+}
+
+eleven(){
+        /bin/bash ./10for.sh
+        pause
+}
+
+twelve(){
+        /bin/bash ./11while.sh
+        pause
+}
+
+thirteen(){
+        /bin/bash ./12until.sh
+        pause
+}
+
+fourteen(){
+        /bin/bash ./13select.sh
+        pause
+}
+
+fifteen(){
+        /bin/bash ./14funciones.sh
+        pause
+}
+
+sixteen(){
+        /bin/bash ./15librerias.sh
+        pause
+}
+
+seventeen(){
+        /bin/bash ./16señales.sh
+        pause
+}
+
+eighteen(){
+        /bin/bash ./17colores.sh
+        pause
+}
+}
+
+show_menus() {
+        clear
+        echo "-------------------"
+        echo "----- M E N U -----"
+        echo "-------------------"
+        echo "1. Hola Mundo"
+        echo "2. Hola Mundo v"
+        echo "3. Variables"
+        echo "4. Arrays"
+        echo "5. Otros usos"
+        echo "6. Aritmeticas"
+        echo "7. Logica"
+        echo "8. Condicionales"
+        echo "9. Case"
+        echo "10. Comprobacion"
+        echo "11. For"
+        echo "12. While"
+        echo "13. Until"
+        echo "14. Select"
+        echo "15. Funciones"
+        echo "16. Librerias"
+        echo "17. Señales"
+        echo "18. Colores"
+        echo "19. exit"
+}
+
+read_options(){
+        local choice
+        read -p "Enter choice [ 1-19 ] " choice
+        case $choice in
+                1) holaMundo ;;
+                2) two ;;
+                3) three ;;
+                4) four ;;
+                5) five ;;
+                6) six ;;
+                7) seven ;;
+                8) eight ;;
+                9) nine ;;
+                10) ten ;;
+                11) eleven ;;
+                12) twelve ;;
+                13) thirteen ;;
+                14) fourteen ;;
+                15) fifteen ;;
+                16) sixteen ;;
+                17) seventeen ;;
+                18) eighteen ;;
+                19) exit 0;;
+                19) exit 0;;
+                *) echo -e "${RED}Error...${STD}" && sleep 2
+        esac
+}
+
+trap '' SIGINT SIGQUIT SIGTSTP
+
+while true
+do
+        show_menus
+        read_options
+done
+    
